@@ -6,8 +6,7 @@ import { first } from "rxjs/operators";
 
 @Component({
   selector: "app-user-list",
-  templateUrl: "./userlist.component.html",
-  styleUrls: ["./userlist.component.css"]
+  templateUrl: "./userlist.component.html"
 })
 export class UserListComponent implements OnInit {
   constructor(private UserService: UserService, private router: Router) {}

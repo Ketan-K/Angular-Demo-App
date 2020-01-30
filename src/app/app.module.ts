@@ -5,12 +5,12 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
-import { LoginComponent } from "./user/login/login.component";
-import { RegisterComponent } from "./user/register/register.component";
 import { TokenInterceptor } from "./services/token.interceptor";
-import { ItemComponent } from "./shared/user/item/item.component";
-import { UserListComponent } from "./shared/user/home/userlist.component";
-import { ListUserComponent } from './component/list-user/list-user.component';
+import { LoginComponent } from "./components/login/login.component";
+import { RegisterComponent } from "./components/register/register.component";
+import { UserListComponent } from "./components/userlist/userlist.component";
+import { ItemComponent } from "./components/item/item.component";
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,7 @@ import { ListUserComponent } from './component/list-user/list-user.component';
     RegisterComponent,
     UserListComponent,
     ItemComponent,
-    ListUserComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -38,3 +38,4 @@ import { ListUserComponent } from './component/list-user/list-user.component';
   bootstrap: [AppComponent]
 })
 export class AppModule {}
+
