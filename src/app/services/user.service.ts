@@ -6,7 +6,6 @@ import { HttpClient } from "@angular/common/http";
 })
 export class UserService {
   constructor(private http: HttpClient) {}
-  baseURL: "http://localhost:8080/user";
   register(user) {
     return this.http.post<any>("http://localhost:8080/user/register", user);
   }

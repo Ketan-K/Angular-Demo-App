@@ -28,5 +28,7 @@ export class UserListComponent implements OnInit {
     console.log(username);
   }
 
-  deleteUser() {}
+  deleteUser(username) {
+    console.log(username);
+  }
 }

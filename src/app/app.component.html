@@ -1,12 +1,40 @@
-<!-- nav -->
 <nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="currentUser">
+  <div class="navbar-nav collapse navbar-collapse">
+    <li class="nav-item">
+      <a class="nav-item nav-link  bg-dark" routerLink="/">Home</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle  bg-dark" href="#" data-toggle="dropdown" aria-haspopup="true"
+        aria-expanded="false" *ngIf="categoryList">
+        Categories
+      </a>
+      <div class="dropdown-menu  bg-dark" aria-labelledby="navbarDropdown">
+        <div *ngFor="let category of categoryList">
+          <a class="dropdown-item nav-link  bg-dark" href="#">{{category.name}}</a>
+        </div>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-item nav-link  bg-dark" routerLink="/listusers">List Users</a>
+    </li>
+  </div>
   <div class="navbar-nav">
-    <a class="nav-item nav-link" routerLink="/">Home</a>
-    <a class="nav-item nav-link" (click)="logout()">Logout</a>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle  bg-dark" href="#" data-toggle="dropdown" aria-haspopup="true"
+        aria-expanded="false" *ngIf="categoryList">
+        {{currentUser}}
+      </a>
+      <div class="dropdown-menu dropdown-menu-lg-right bg-dark" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item nav-link  bg-dark" routerLink="/change-password">Change Password</a>
+        <a class="dropdown-item nav-link  bg-dark" routerLink="/add-item" *ngIf="isAdmin">Add Item</a>
+        <a class="dropdown-item nav-link  bg-dark" routerLink="/add-category" *ngIf="isAdmin">Add Category</a>
+        <a class="dropdown-item nav-link  bg-dark" routerLink="/" (click)="logout()">Logout</a>
+      </div>
+    </li>
   </div>
 </nav>
 
-<!-- main content container -->
+
 <div class="jumbotron">
   <div class="container">
     <div class="row">

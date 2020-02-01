@@ -1,1 +1,12 @@
-<p>home works!</p>
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Items</h2>
+  </div>
+</div>
+
+<div class="list-items">
+  <div class="list-item" *ngFor="let item of items">
+    <app-item [name]="item.name" [price]="item.price" [description]="item.description" [image]="(item.image)">
+    </app-item>
+  </div>
+</div>
