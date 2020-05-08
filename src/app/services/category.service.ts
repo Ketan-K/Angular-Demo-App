@@ -8,6 +8,6 @@ export class CategoryService {
   constructor(private http: HttpClient) {}
 
   getList() {
-    return this.http.get<any>("http://localhost:8080/category/list");
+    return this.http.get<any>("https://ketan-express-app.herokuapp.com/category/list");
   }
 }
