@@ -8,10 +8,10 @@ export class ItemService {
   constructor(private http: HttpClient) {}
 
   getItemList() {
-    return this.http.get<any>("http://localhost:8080/item/list");
+    return this.http.get<any>("https://ketan-express-app.herokuapp.com/item/list");
   }
 
   addItem(item) {
-    return this.http.post<any>("http://localhost:8080/item/add", item);
+    return this.http.post<any>("https://ketan-express-app.herokuapp.com/item/add", item);
   }
 }
