@@ -36,7 +36,7 @@ export class AuthenticationService {
 
   login(username, password) {
     return this.http
-      .post<any>("http://localhost:8080/user/login", { username, password })
+      .post<any>("https://ketan-express-app.herokuapp.com/user/login", { username, password })
       .pipe(
         map(response => {
           // store user details and jwt token in local storage to keep user logged in between page refreshes
@@ -62,6 +62,6 @@ export class AuthenticationService {
 
   logout() {
     this.currentUserSubject.next(null);
-    return this.http.delete<any>("http://localhost:8080/user/logout");
+    return this.http.delete<any>("https://ketan-express-app.herokuapp.com/user/logout");
   }
 }
