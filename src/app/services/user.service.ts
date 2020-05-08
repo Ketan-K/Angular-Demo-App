@@ -7,9 +7,9 @@ import { HttpClient } from "@angular/common/http";
 export class UserService {
   constructor(private http: HttpClient) {}
   register(user) {
-    return this.http.post<any>("http://localhost:8080/user/register", user);
+    return this.http.post<any>("https://ketan-express-app.herokuapp.com/user/register", user);
   }
   getUsersList() {
-    return this.http.get<any>("http://localhost:8080/user/list");
+    return this.http.get<any>("https://ketan-express-app.herokuapp.com/user/list");
   }
 }
