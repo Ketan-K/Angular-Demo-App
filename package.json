@@ -19,6 +19,8 @@
     "@angular/platform-browser": "~8.2.14",
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "~8.2.14",
+    "@angular/cli": "~8.3.23",
+    "@angular/compiler-cli": "~8.2.14",
     "bootstrap": "^4.4.1",
     "jquery": "^3.4.1",
     "ng-select": "^1.0.2",
